@@ -1,0 +1,22 @@
+{
+  "metadata": {
+    "id": "updateUserPortalData",
+    "name": "Update Visitor Data",
+    "description": "Update visitor data with user portal data"
+  },
+  "raiseEventOnlyOnceForProfile": false,
+  "raiseEventOnlyOnceForSession": false,
+  "condition": {
+    "type": "eventTypeCondition",
+    "parameterValues": {
+      "eventTypeId": "updateUserPortalProperties"
+    }
+  },
+  "actions": [
+    {
+      "type": "updatePropertiesAction",
+      "parameterValues": {
+      }
+    }
+  ]
+}

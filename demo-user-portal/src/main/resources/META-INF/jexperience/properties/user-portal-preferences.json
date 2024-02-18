@@ -1,0 +1,15 @@
+{
+  "target": "profiles",
+  "multivalued": true,
+  "type": "string",
+  "metadata": {
+    "id": "_user_portalPreferences",
+    "name": "_user_Portal Preferences",
+    "systemTags": [
+      "positionInCard.1",
+      "cardDataTag/_userPortal/1/User Portal",
+      "hasCardDataTag"
+    ],
+    "readOnly": false
+  }
+}

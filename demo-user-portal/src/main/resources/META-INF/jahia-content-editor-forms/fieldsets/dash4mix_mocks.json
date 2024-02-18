@@ -1,0 +1,40 @@
+{
+  "name": "dash4mix:mocks",
+  "description": "",
+  "dynamic": false,
+  "fields": [
+    {
+      "name": "dash4:mocksSource",
+      "selectorType": "Choicelist",
+      "valueConstraints": [
+        {
+          "value": {
+            "type": "String",
+            "value": "reference"
+          },
+          "displayValue": "My mocks",
+          "propertyList": [
+            {
+              "name": "addMixin",
+              "value": "dash4mix:mocksReference"
+            }
+          ]
+        },
+        {
+          "value": {
+            "type": "String",
+            "value": "direct"
+          },
+          "displayValue": "Write your mocks",
+          "propertyList": [
+            {
+              "name": "addMixin",
+              "value": "dash4mix:mocksDirect"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+
