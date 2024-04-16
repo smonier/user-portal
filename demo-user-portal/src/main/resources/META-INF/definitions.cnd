@@ -16,13 +16,20 @@
  itemtype = content
  - dash4:btnEditPreference (string) = resourceBundle('label.dash4_btnEditPreference') autocreated internationalized mandatory indexed=no
 
+[dash4mix:supplierPortalConfig] mixin
+extends = dash4mix:portalConfiguration
+- dash4:label01 (string) indexed=no
+- dash4:label01Value (string) indexed=no
+- dash4:label02 (string) indexed=no
+- dash4:label02Value (string) indexed=no
+- dash4:label03 (string) indexed=no
+- dash4:label03Value (string) indexed=no
+
 [dash4mix:portalConfiguration] mixin
 // itemtype = webappConfiguration
   itemtype = content
  - dash4:webappTheme (string) indexed=no
  - dash4:multichart (boolean) indexed=no
- - dash4:supplierPortal (boolean) indexed=no
-
 
 [dash4mix:mocksDef] mixin
  - dash4:products (string) indexed=no

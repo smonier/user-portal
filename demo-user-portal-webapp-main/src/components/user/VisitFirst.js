@@ -27,7 +27,7 @@ export const VisitFirst = (props) => {
                             gutterBottom
                             variant="overline"
                         >
-                            First visit
+                            Member since
                         </Typography>
                         <Typography
                             color="textPrimary"

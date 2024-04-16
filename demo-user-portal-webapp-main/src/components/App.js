@@ -5,7 +5,7 @@ import {getUserContext} from "../data/context";
 
 import {Box, Grid, Container, ThemeProvider,styled} from "@mui/material"
 
-import {VisitFirst, VisitLast, AccountProfile, VisitNumber, ProductCard,SalesTarget,SalesMargin} from "./user";
+import {VisitFirst, VisitLast, AccountProfile, VisitNumber, ProductCard, Label01, Label02, Label03} from "./user";
 import {Leads} from "./sfdc";
 import {mergedTheme} from "../theme";
 import {Chart} from "./misc";
@@ -96,13 +96,13 @@ const App = () => {
             <Grid container spacing={3}>
 
               <Grid item xs={12} md={4}>
-                <VisitLast />
+                {portalData?.label01Text?.value !== null ? <Label01 portalData={portalData}/> :  <VisitLast />}
               </Grid>
               <Grid item xs={12} md={4}>
-                {portalData?.isSupplierPortal?.value === "true" ? <SalesMargin /> :  <VisitNumber />}
+                {portalData?.label02Text?.value !== null ? <Label02 portalData={portalData}/> :  <VisitNumber />}
               </Grid>
               <Grid item xs={12}  md={4}>
-                {portalData?.isSupplierPortal?.value === "true" ? <SalesTarget /> :  <VisitFirst />}
+                {portalData?.label02Text?.value !== null ? <Label03 portalData={portalData}/> :  <VisitFirst />}
               </Grid>
 
               <Grid item xs={12}>
