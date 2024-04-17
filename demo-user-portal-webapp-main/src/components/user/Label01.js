@@ -1,9 +1,14 @@
 import { Avatar, Card, CardContent, Grid, Typography } from '@mui/material';
 import PriceCheckIcon from '@mui/icons-material/PriceCheck';
-import React from "react";
+import React, {useContext} from "react";
+import {StoreCtx} from "../../context";
 import ScheduleIcon from "@mui/icons-material/Schedule";
 
 export const Label01 = ({portalData,props}) => {
+    const { state } = useContext(StoreCtx);
+    const {userData} = state;
+    const label01ValueCDP = userData?.profileProperties?._up_labe01Value || "-";
+
     const label01Text = portalData?.label01Text?.value  || "-";
     const label01Value = portalData?.label01Value?.value || "-";
     return(
@@ -32,9 +37,11 @@ export const Label01 = ({portalData,props}) => {
                             color="textPrimary"
                             variant="h4"
                         >
-                            {label01Value!=="-" &&
-                            label01Value
-                            }
+                            {label01ValueCDP !== "-" ? (
+                                <span>{label01ValueCDP}</span>
+                            ) : (
+                                label01Value !== "-" && <span>{label01Value}</span>
+                            )}
                         </Typography>
                     </Grid>
                     <Grid item>

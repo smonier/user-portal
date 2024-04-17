@@ -1,8 +1,13 @@
 import { Avatar, Card, CardContent, Grid, Typography } from '@mui/material';
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
-import React from "react";
+import React, {useContext} from "react";
+import {StoreCtx} from "../../context";
 
 export const Label03 = ({portalData,props}) => {
+    const { state } = useContext(StoreCtx);
+    const {userData} = state;
+    const label03ValueCDP = userData?.profileProperties?._up_labe03Value || "-";
+
     const label03Text = portalData?.label03Text?.value  || "-";
     const label03Value = portalData?.label03Value?.value || "-";
     return(
@@ -31,9 +36,11 @@ export const Label03 = ({portalData,props}) => {
                             color="textPrimary"
                             variant="h4"
                         >
-                            {label03Value!=="-" &&
-                            label03Value
-                            }
+                            {label03ValueCDP !== "-" ? (
+                                <span>{label03ValueCDP}</span>
+                            ) : (
+                                label03Value !== "-" && <span>{label03Value}</span>
+                            )}
                         </Typography>
                     </Grid>
                     <Grid item>

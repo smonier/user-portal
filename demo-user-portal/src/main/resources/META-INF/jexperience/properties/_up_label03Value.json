@@ -1,0 +1,15 @@
+{
+  "target": "profiles",
+  "multivalued": true,
+  "type": "string",
+  "metadata": {
+    "id": "_up_label03Value",
+    "name": "Label 03 Value",
+    "systemTags": [
+      "positionInCard.4",
+      "cardDataTag/_userPortal/1/User Portal",
+      "hasCardDataTag"
+    ],
+    "readOnly": false
+  }
+}
